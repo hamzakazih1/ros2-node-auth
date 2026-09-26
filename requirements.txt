@@ -1,0 +1,3 @@
+# The simulation and tests use only the Python standard library.
+# The ROS 2 nodes additionally need a ROS 2 install (Humble or newer): rclpy, std_msgs.
+cryptography>=42
