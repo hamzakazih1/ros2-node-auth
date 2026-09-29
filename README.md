@@ -1,5 +1,7 @@
 # ROS 2 Node Spoofing and Token Authentication
 
+[![tests](https://github.com/hamzakazih1/ros2-node-auth/actions/workflows/tests.yml/badge.svg)](https://github.com/hamzakazih1/ros2-node-auth/actions/workflows/tests.yml)
+
 *Personal project, 2026 — a continuation of my MSc thesis that builds and verifies the runtime defence the thesis discussed but did not implement.*
 
 A demonstration that ROS 2's default configuration lets an unauthorised node inject commands onto a topic, and a token-authentication layer that stops it — resisting forgery, key-guessing and replay.
@@ -77,6 +79,8 @@ python -m unittest discover tests -v
 ```
 
 13 tests: genuine messages accepted; forged, altered, wrong-key, stale, future, replayed and out-of-order messages rejected; the three attack scenarios; and a check that tag comparison stays constant-time.
+
+CI runs these tests and the simulation on Python 3.10–3.13 with no ROS install and no pip packages (`.github/workflows/tests.yml`). The ROS 2 nodes themselves are not exercised in CI.
 
 ## Why this project exists
 
